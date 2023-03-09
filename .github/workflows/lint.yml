@@ -21,8 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
       - name: Install clang-format
-        run: apt-get update && apt-get install -y --no-install-recommends clang-format
+        run: pip install clang-format
       - name: Run clang-format
         working-directory: third_party/pytorch/third_party/nvfuser
         run: find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file -i {} \;
