@@ -20,7 +20,7 @@ jobs:
       - name: Install flake8
         run: pip install flake8
       - name: Run flake8
-        working-directory: $working_directory
+        working-directory: ${{ env.working_directory }}
         run: flake8
 
   clang-format:
@@ -35,5 +35,5 @@ jobs:
       - name: Install clang-format
         run: pip install clang-format
       - name: Run clang-format
-        working-directory: $working_directory
+        working-directory: ${{ env.working_directory }}
         run: find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file -i {} \;
