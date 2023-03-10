@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '3.10' 
       - name: Install yapf
-        run: pip install yapf
+        run: pip install yapf toml
       - name: Run yapf
         working-directory: ${{ env.working_directory }}
         # do not add --exit-code here since this job is only a suggestion that does not fail
