@@ -36,4 +36,4 @@ jobs:
         run: pip install clang-format
       - name: Run clang-format
         working-directory: ${{ env.working_directory }}
-        run: find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file --verbose -i {} \;
+        run: find . -regex '.*\.\(cpp\|hpp\|cu\|c\|h\)' -exec clang-format -style=file -i {} \;
