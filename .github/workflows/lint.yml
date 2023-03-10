@@ -23,7 +23,7 @@ jobs:
         working-directory: ${{ env.working_directory }}
         run: flake8
 
-  yapf (formatting suggestion):
+  yapf_suggestions:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
