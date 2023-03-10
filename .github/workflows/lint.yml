@@ -23,6 +23,24 @@ jobs:
         working-directory: ${{ env.working_directory }}
         run: flake8
 
+  yapf (formatting suggestion):
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - name: Install yapf
+        run: pip install yapf
+      - name: Run yapf
+        working-directory: ${{ env.working_directory }}
+        # do not add --exit-code here since this job is only a suggestion that does not fail
+        run: |
+          yapf -ri .
+          git --no-pager diff
+
   clang-format:
     runs-on: ubuntu-latest
     steps:
