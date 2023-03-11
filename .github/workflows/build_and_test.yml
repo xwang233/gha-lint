@@ -19,7 +19,8 @@ jobs:
         run: >-
           apt-get update &&
           apt-get install -y --no-install-recommends
-            build-essentials git
+            build-essential
+            git
       - uses: actions/checkout@v3
         with:
           submodules: true
