@@ -8,7 +8,7 @@ env:
   working_directory: third_party/pytorch/third_party/nvfuser
 
 jobs:
-  lint_in_self_hosted_container:
+  run_test:
     runs-on: self-hosted
     container:
       image: a_private_local_image
