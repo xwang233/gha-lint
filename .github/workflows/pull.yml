@@ -1,19 +1,25 @@
-name: self hosted 2
+name: pull
 
 on:
-  push:
   pull_request:
 
-env:
-  working_directory: third_party/pytorch/third_party/nvfuser
-
 jobs:
-  run_test:
+  build:
     runs-on: self-hosted
     container:
       image: localhost:5005/a_private_local_image
     steps:
-      - name: start job
+      - name: build
         run: |
           echo "repository ${{ github.repository }}"
           echo "sha ${{ github.sha }}"
+  
+  # WIP!
+  test:
+    runs-on: self-hosted
+    container:
+      image: somethingaaaaa
+    steps:
+      - name: test
+        run: |
+          echo "run some test"
