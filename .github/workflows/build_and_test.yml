@@ -18,8 +18,8 @@ jobs:
       - name: install ubuntu basics
         run: >-
           apt-get update &&
-          apt-get install -y --no-install-recommends
-            build-essential
+          apt-get install -y --no-install-recommends \
+            build-essential \
             git
       - uses: actions/checkout@v3
         with:
