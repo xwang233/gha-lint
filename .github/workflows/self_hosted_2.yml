@@ -14,4 +14,6 @@ jobs:
       image: localhost:5005/a_private_local_image
     steps:
       - name: start job
-        run: echo "${{ toJSON(github) }}"
+        run: |
+          echo "repository ${{ github.repository }}"
+          echo "sha ${{ github.sha }}"
