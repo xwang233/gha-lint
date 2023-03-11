@@ -8,7 +8,7 @@ env:
   working_directory: third_party/pytorch/third_party/nvfuser
 
 jobs:
-  build:
+  lint_in_self_hosted_container:
     runs-on: self-hosted
     container:
       image: ubuntu:22.04
