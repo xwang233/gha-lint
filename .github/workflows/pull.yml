@@ -17,6 +17,7 @@ jobs:
   
   # WIP!
   test:
+    needs: build
     runs-on: self-hosted
     container:
       image: somethingaaaaa
