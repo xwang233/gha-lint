@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: build
         run: |
+          echo "run some build"
           echo "repository ${{ github.repository }}"
           echo "sha ${{ github.sha }}"
   
@@ -20,8 +21,10 @@ jobs:
     needs: build
     runs-on: self-hosted
     container:
-      image: somethingaaaaa
+      image: localhost:5005/a_private_local_image
     steps:
       - name: test
         run: |
           echo "run some test"
+          echo "repository ${{ github.repository }}"
+          echo "sha ${{ github.sha }}"
