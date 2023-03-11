@@ -20,6 +20,7 @@ jobs:
           apt-get update &&
           apt-get install -y --no-install-recommends \
             build-essential \
+            ca-certificates \
             git
       - uses: actions/checkout@v3
         with:
