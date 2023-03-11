@@ -1,4 +1,4 @@
-name: Build and test
+name: self hosted 1
 
 on:
   push:
