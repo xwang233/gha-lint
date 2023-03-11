@@ -1,8 +1,8 @@
 name: self hosted 1
 
-on:
-  push:
-  pull_request:
+on: ~
+  # push:
+  # pull_request:
 
 env:
   working_directory: third_party/pytorch/third_party/nvfuser
