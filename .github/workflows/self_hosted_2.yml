@@ -11,7 +11,7 @@ jobs:
   run_test:
     runs-on: self-hosted
     container:
-      image: a_private_local_image
+      image: localhost:5005/a_private_local_image
     steps:
       - name: start job
         run: echo "${{ github }}"
