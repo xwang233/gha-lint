@@ -15,7 +15,7 @@ jobs:
           echo "run some build"
           echo "repository ${{ github.repository }}"
           echo "sha ${{ github.sha }}"
-  
+
   # WIP!
   test:
     needs: build
