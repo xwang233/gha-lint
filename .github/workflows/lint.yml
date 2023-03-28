@@ -7,7 +7,7 @@ on:
       - master
 
 env:
-  working_directory: third_party/pytorch/third_party/nvfuser
+  working_directory: third_party/fuser
 
 jobs:
   flake8:
