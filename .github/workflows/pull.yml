@@ -5,12 +5,17 @@ on:
   push:
    branches:
       - master
+  issue_comment:
+    types: [created]
 
 jobs:
   build:
     runs-on: self-hosted
     container:
       image: localhost:5005/a_private_local_image
+    if: >
+      contains([xwang233], github.actor) &&
+      startsWith(github.event.comment.body, '!build')
     steps:
       - name: build
         run: |
