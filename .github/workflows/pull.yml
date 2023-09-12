@@ -14,7 +14,6 @@ jobs:
     container:
       image: localhost:5005/a_private_local_image
     if: >
-      contains([xwang233], github.actor) &&
       startsWith(github.event.comment.body, '!build')
     steps:
       - name: build
